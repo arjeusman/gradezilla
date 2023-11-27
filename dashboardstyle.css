@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root
+{
+    --clr:gray;
+}
+
+body
+{
+    min-height: 100vh;
+    background: var(--clr); /*declare @ :root equal to color Gray*/
+}
+
+
+#profilepic{
+    height: 50px;
+    width: 50px;
+    border-radius: 50% 50%;
+    background-color:aqua ;
+}
+
+#name{ /*Profile NAme*/ 
+    font-family: 'Lilita One';
+    font-weight: 100;
+    text-align: center;
+    justify-content: center;
+}
+
+.sidebar
+{
+    position: absolute;
+    width: 80px;
+    height: 100vh;
+    background: white;
+    transition: 0.5s;
+    padding-left: 10px;
+    overflow: hidden;
+}
+
+.sidebar.active
+{
+    width: 300px;
+}
+
+.sidebar ul
+{
+    position: relative;
+    height: 100vh;
+}
+
+.sidebar ul li.active
+{
+    position: relative;
+    list-style:none;
+    background: var(--clr);
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.sidebar ul li.active::before /*corner border radius top*/
+{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 0;
+    top: -20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 5px 5px 0 5px var(--clr);
+    background-color:transparent;
+}
+
+.sidebar ul li.active::after /*corner border radius bottom*/
+{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 0;
+    border-top-right-radius: 20px;
+    box-shadow: 5px -5px 0 5px var(--clr);
+    background-color:transparent;
+}
+
+.sidebar ul li.brand-div
+{
+    margin-bottom: 20px;
+    padding-top: 50px;
+}
+
+.sidebar ul li a
+{
+    position: relative;
+    display: flex;
+    white-space:nowrap;
+    text-decoration: none;
+}
+
+.sidebar ul li a .icon
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 60px;
+    height: 70px;
+    font-size: 1.5em;
+    color:#333;
+    transition: 0.5s;
+}
+
+.sidebar ul li.active a .icon
+{
+color:white;
+}
+
+
+.sidebar ul li.active a .text
+{
+    color: white;
+}
+.sidebar ul li a .text
+{
+    position: relative;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    color: #333;
+    padding-left: 15px;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    text-transform:uppercase;
+    font-weight: 600;
+}
+
+.sidebar ul li:hover a .icon, 
+.sidebar ul li:hover a .text
+{
+    color: var(--bg); /*declared @li style="--bg:#0fc70f;" equal to color GREEN*/
+}
+
+.menutoggle /*sidebar Toggle for icons only or with text*/
+{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: lightskyblue;
+    z-index: 1000;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+    margin-right: 50px;
+}
+
+.menutoggle::before
+{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: white;
+    transform: translateY(-9px);
+    transition: 0.5s;
+    box-shadow: 0 9px 0 white;
+}
+
+.menutoggle.active::before
+{
+    transform: translateY(0px) rotate(45deg);
+    box-shadow: 0 0 0 white;
+}
+
+.menutoggle::after
+{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: white;
+    transform: translateY(9px);
+    transition: 0.5s;
+}
+
+.menutoggle.active::after
+{
+    transform: translateY(0px) rotate(-45deg);
+}
+
+/*DASHBOARD*/
+.dash{
+    padding-left: 0;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.content{
+    margin-top: 20px;
+    height: 100%;
+}
+
+.dashboard{
+    margin-right:20px;
+}
+
+.logo-border{
+display: flex;
+justify-content: center;
+text-align: center;
+}
+
+.grade-first-box{
+   margin-left: 320px;
+}
+
+.grade-second-box{
+    margin-left:410px;
+}
+
+.upperdash{
+    background-color: rgb(194, 194, 194)
+}
+
+p,{
+    font-size: large; 
+    font-weight: 600;
+}
+
+#logo
+{
+    height: 50px;
+    width: 50px;
+
+}
