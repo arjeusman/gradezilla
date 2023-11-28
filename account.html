@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!--Icons FontAwesome--><script src="https://kit.fontawesome.com/90344a3882.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="dashboardstyle.css">
+
+    <!--Import Fonts--><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Lilita+One&family=Pacifico&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200&display=swap" rel="stylesheet"><!--Import Fonts-->
+<style>
+    body{
+        background-color: gray;
+    }
+</style>
+
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row dashboard">
+            <div class="col-2 dash"><!--SIDEBAR-->
+                <div class="menutoggle"></div>
+                <div class="sidebar"> <!--Sidebar-->
+                    <ul class="list-unstyled">
+                        <li class="brand-div"> <!--Logo-->
+                            <a href="#">
+                                <div class="icon"><img src="profile.jpg" alt=logo id="profilepic"></div>
+                                <div class="text">
+                                    <h3 id="name">Juan Miguel</h3>
+                                </div>
+                            </a> 
+                        </li>  <!--End of Logo-->
+                
+                        <div class="bottom"> <!--Home start-->
+                            <li style="--bg:#0fc70f;">
+                                <a href ="">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-house-chimney-window"></i>
+                                    </div>
+                                    <div class="text">HOME PAGE</div>
+                                    </a>
+                            </li>
+                        </div> <!--Home End-->
+                        <div class="menulist"> <!--MenuList-->
+                            <li style="--bg:#0fc70f;" class="active">
+                                <a href ="dashboard.html">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-tv"></i>
+                                    </div>
+                                    <div class="text">DASHBOARD</div>
+                                </a>
+                            </li>
+                            <li style="--bg:#0fc70f;">
+                                <a href ="#">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-person-chalkboard"></i>
+                                    </div>
+                                    <div class="text">Advisory Class</div>
+                                </a>
+                            </li>
+                            <li style="--bg:#0fc70f;">
+                                <a href ="#">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-clipboard-list"></i>
+                                    </div>
+                                    <div class="text">To-Do List</div>
+                                </a>
+                            </li>
+                            <li style="--bg:#0fc70f;">
+                                <a href ="#">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-gear"></i>
+                                    </div>
+                                    <div class="text">Account Settings</div>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="bottom  border-top "> <!--Logout start-->
+                            <li style="--bg:#0fc70f;">
+                                <a href ="#">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-right-from-bracket"></i>
+                                    </div>
+                                    <div class="text">LOG-OUT</div>
+                                    </a>
+                            </li><br/>
+                        </div> <!--Logout End-->
+                    </ul>
+                </div> <!--End of Sidebar-->
+                
+                <!--Vanilla JS-->
+                    <script>
+                        let menutoggle = document.querySelector('.menutoggle');
+                        let sidebar = document.querySelector('.sidebar');
+                        menutoggle.onclick = function(){
+                            menutoggle.classList.toggle('active');
+                            sidebar.classList.toggle('active');
+                        }
+                
+                        let menulist = document.querySelectorAll('.menulist li');
+                        function activeLink(){
+                            menulist.forEach((item)=>
+                            item.classList.remove('active'));
+                            this.classList.add('active')
+                        }
+                        menulist.forEach((item)=>
+                        item.addEventListener('click',activeLink));
+                    </script>
+            </div><!--SIDE-->
+            <div class="col-10 content bg-light border border-2 border-dark">
+                <div class="row  upperdash border-bottom border-2 border-dark">
+                    <div class="col p-3 text-center">
+                        <h2><b>DASHBOARD</b></h2>
+                    </div>
+                    <div class="col logo-border p-3 ">
+                        <p class="pt-2"><em><b>powered by:</b></em></p>
+                        <img src="gradezilla01.png" alt="logo" id="logo">
+                        <h2>Gradezilla</h2>
+                    </div> 
+                    <div class="col p-3 text-center">
+                    INSERT CONTENT <div>
+                        
+        
+          
+        </div>
+    </div>
+</body>
+</html>
