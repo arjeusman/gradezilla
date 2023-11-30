@@ -1,22 +1,3 @@
-// (() => {
-//     'use strict'
-//     const forms = document.querySelectorAll('.needs-validation')
-//     Array.from(forms).forEach(form => {
-//         form.addEventListener('submit', (e) => {
-//             if(form.checkValidity()){
-//                 e.preventDefault()
-//                 e.stopPropagation()
-//             } else {
-//                 Process()
-//                 form.submit()
-//             }
-//         form.classList.add('was-validated')
-//     }, false)
-//     })
-// })()
-
-//perpare default data
-
 //check if user is signed in
 function checkAuth(){
     let id = localStorage.getItem('gz_current_user')
@@ -100,7 +81,8 @@ function Process(message='Processing please wait.') {
         allowOutsideClick: false,
         showConfirmButton: false,
         width: 350,
-        padding: 20
+        padding: 20,
+        timer: 5000
     })
 }
 
