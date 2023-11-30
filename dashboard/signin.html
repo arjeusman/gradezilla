@@ -64,7 +64,7 @@
                 let email = form.email.value;
                 let password = form.password.value;
                 let user = getUser(email, password)
-                Process('Signin in please wait.')
+                Process('Signing in please wait.')
                 window.setTimeout((e) => {
                     if (user != null) {
                         localStorage.setItem('gz_current_user', user.id)
