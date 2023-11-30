@@ -82,7 +82,7 @@ function Process(message='Processing please wait.') {
         showConfirmButton: false,
         width: 350,
         padding: 20,
-        timer: 5000
+        timer: 2000
     })
 }
 
