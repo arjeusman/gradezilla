@@ -3,7 +3,7 @@ function checkAuth(){
     let id = localStorage.getItem('gz_current_user')
     if (id == null || id == '' || id == undefined) {
         Swal.fire({
-            icon: 'error',
+            icon: 'warning',
             iconHtml: '<i class="fa-solid fa-triangle-exclamation"></i>',
             html: 'Please login your account. Redirecting you to the signin page.',
             allowOutsideClick: false,
@@ -40,9 +40,7 @@ function isSigned() {
                 icon: 'swal2-icon-show'
             }
         })
-        window.setTimeout((e) => {
-            window.location.href = 'dashboard.html'
-        }, 2000)
+        Redirect('dashboard.html')
     }
 }
 
